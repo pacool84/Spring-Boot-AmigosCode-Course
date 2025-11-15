@@ -1,9 +1,14 @@
 package com.amigoscode;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.util.Objects;
 
+@Entity
 public class SoftwareEngineer {
     //Attributes
+    @Id
     private Integer id;
     private String name;
     private String techStack;

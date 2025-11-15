@@ -14,8 +14,10 @@ public class Application {
 	}
 
     @GetMapping // Rest Endpoint
-    public String helloWorld() {
-        return "Hello World my friend SPRING BOOT!";
-    }
+   public String helloWorld() {
+       java.time.ZonedDateTime now = java.time.ZonedDateTime.now(java.time.ZoneId.systemDefault());
+       java.time.format.DateTimeFormatter fmt = java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z");
+       return String.format("Hello — My Friend Spring Boot service. Server time: %s", now.format(fmt));
+   }
 
 }

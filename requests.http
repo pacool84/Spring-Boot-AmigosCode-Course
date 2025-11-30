@@ -1,10 +1,18 @@
-### GET a la raíz (comprobar servidor)
-GET http://localhost:8080/ HTTP/1.1
-Host: localhost:8080
-Accept: application/json
+  ### GET a la raíz (comprobar servidor)
+  GET http://localhost:8080/
+  Accept: application/json
 
-###
-# GET al endpoint de software engineers
-GET http://localhost:8080/api/v1/software-engineers HTTP/1.1
-Host: localhost:8080
-Accept: application/json
+  ###
+  # GET al endpoint de software engineers
+  GET http://localhost:8080/api/v1/software-engineers
+  Accept: application/json
+
+  ###
+  # POST para crear un nuevo software engineer (requiere @PostMapping en el controlador)
+  POST http://localhost:8080/api/v1/software-engineers
+  Content-Type: application/json
+
+  {
+    "name": "Juan Pérez",
+    "techStack": "JavaScript"
+  }

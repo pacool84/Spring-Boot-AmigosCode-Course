@@ -20,4 +20,9 @@ public class Application {
        return String.format("Hello — My Friend Spring Boot service. Server time: %s", now.format(fmt));
    }
 
+   @GetMapping("/health") // Rest Endpoint, Es el end point que se puede consultar con un metodo get en la ruta /health
+    public String healthCheck() {
+        return "The Software Engineer Service is up and running!";
+   }
+
 }
